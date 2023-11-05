@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>BK delivery</title>
+      <link rel="stylesheet" href="index.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link rel="favicon" href="./pavicon.png">
+      <style>
+        .path{
+            opacity: 0;
+            transition: 0.4s;
+        }
+        button{
+            position:fixed;
+            z-index: 10;
+            width: 50px;
+            height: 50px;
+            margin-top: 20px;
+            border-radius: 100%;
+            background-color: rgba(0,0,0,0);
+            border:0;
+        }
+        #button1{
+            top: 230px;
+            left:390px;
+        }
+        #button2{
+            top:270px;
+            left:588px;
+        }
+        #button3{
+            top:200px;
+            left:632px; 
+        }
+        #button4{
+            top:165px;
+            left:675px;
+        }
+        #button5{
+            top:90px;
+            left:730px;
+        }
+        #button6{
+            top:17px;
+            left:1140px;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            display:flex ;  
+            justify-content: center; 
+            align-items: center;
+        }
+        #id{
+            width: 1228px;
+            height: 714px;
+        }
+        #bg > img {
+            position: absolute;
+            top: 0;
+        }
+        #bg{
+            width: 1228px;
+        }
+      </style>
+   </head>
+   <body><!--B1:bt1
+                kios:bt2
+            A1:bt3
+        A2:bt4
+        A4:bt5
+        B7:bt6 -->
+    <div id="container">
+        <div id="bg">
+            <img style="z-index: 2;" src="./asset/ontop.png">
+            <img class="path" id="img3" src="./asset/3.png">
+            <img class="path" id="img2" src="./asset/2.png">
+            <img class="path" id="img4" src="./asset/4.png">
+            <img class="path" id="img5" src="./asset/5.png">
+            <img class="path" id="img1" src="./asset/1.png">
+            <img class="path" id="img6" src="./asset/6.png">
+            <img style="z-index: -1;" src="./bground.png">
+            <button id="button1"> 
+                
+            </button>
+            <button id="button2">
+                
+            </button>
+            <button id="button3">
+                
+            </button> 
+            <button id="button4">
+                
+            </button> 
+            <button id="button5">
+                
+            </button> 
+            <button id="button6">
+                
+            </button> 
+        </div>
+    </div>
+    <script>
+        document.addEventListener("click", function(event){
+            if (event.target.tagName === "BUTTON") {
+                let path = document.getElementsByClassName('path')
+                for (let i = 0; i < path.length; i++) {
+                    path[i].style.opacity = 0;
+                };
+                document.getElementById(`img${event.target.id.replace('button', '')}`).style.opacity=1; 
+            }
+        })
+    </script>
+</body>      
