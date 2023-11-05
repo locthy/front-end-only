@@ -5,6 +5,9 @@
   box-sizing: border-box;
   user-select: none;
 }
+a {
+  text-decoration: none;
+}
 .bg-img{
   background: url('https://scontent.fsgn8-4.fna.fbcdn.net/v/t1.15752-9/386459886_355698986855177_2020595747474547948_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=AZ2I-MUm6k0AX_EiiBD&_nc_ht=scontent.fsgn8-4.fna&oh=03_AdQLl8oa4LbM-u5btFD3sTvExveuls0_3NJJEXEDbN7xxQ&oe=656B3BBE');
   height: 100vh;
@@ -90,17 +93,18 @@
 .pass:hover a{
   text-decoration: underline;
 }
-.field input[type="submit"]{
+.test {
   background: #3498db;
   border: 1px solid #2691d9;
   color: white;
   font-size: 18px;
+  padding: 10px;
   letter-spacing: 1px;
   font-weight: 600;
   cursor: pointer;
   font-family: 'Montserrat',sans-serif;
 }
-.field input[type="submit"]:hover{
+.test:hover{
   background: #2691d9;
 }
 .login{
